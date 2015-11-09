@@ -29,5 +29,5 @@ exports.start = start; //8
 5. writing 200 (success status) to http response header
 6. writing hello world onto the browser i.e http response body
 7. end of the response
-8. exporting the server module to other modules 
+8. exporting the server module to make available to other modules 
 */
