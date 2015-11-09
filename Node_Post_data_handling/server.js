@@ -18,7 +18,7 @@ function start(route,handle) {                                       // function
 		});
 		
 		request.addListener("end", function() {                      // calling the event handler when the data is completely read 
-		route(handle, pathname, response, postData);                     // calling the route function that is defined in router.js by passing the handle (object), pathname(variable storing the parsed pathname),response (object)											         // end the response
+		route(handle, pathname, response, postData);                     // calling the route function that is defined in router.js by passing the handle (object), pathname(variable storing the parsed pathname),response (object)
 	
 	})}).listen(8888);                                               // listen() is a method of http which listens to the requests from the port whose number is specified 
 	

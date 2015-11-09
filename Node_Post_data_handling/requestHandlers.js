@@ -3,7 +3,7 @@ var querystring = require("querystring");    // making querystring module availa
 function start(response, postData) {                                            
 	console.log("I entered start function"); 
 	// the below tags creates a text box to take the input and a button in the browser and saves in the variable body  
-	var body = '<html>'+                                                    // error: the html tags are only displayed instead of text box  
+	var body = '<html>'+                                                     
              '<head>'+
              '<meta http-equiv="Content-Type" content="text/html"' +
              'charset=UTF-8" />'+
@@ -16,7 +16,7 @@ function start(response, postData) {
              '</body>'+
              '</html>';
 			 
-	response.writeHead(200, {"Content-Type": "text/plain"});              
+	response.writeHead(200, {"Content-Type": "text/html"});              
 	response.write(body);                                                            // displays an empty text area to obtain the input from the user         
 	response.end();                                                    
 }
@@ -27,7 +27,7 @@ function start(response, postData) {
 function upload(response, postData) {                                  
 	console.log("Request for upload was called, can upload the file");
 	response.writeHead(200, {"Content-Type": "text/plain"});
-	response.write("You've sent the text " + querystring.parse(postData).text);     // parses the postData and gets the individual fields that make up the POST data                          
+	response.write("You've sent the text: " + querystring.parse(postData).text);     // parses the postData and gets the individual fields that make up the POST data                          
 	response.end();
 }
 
