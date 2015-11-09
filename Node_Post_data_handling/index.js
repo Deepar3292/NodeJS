@@ -2,7 +2,7 @@ var server = require("./server");                           // gets the server m
 var router = require("./router");                           // gets the router module stored in router.js
 var requestHandler = require("./requestHandlers");          // gets the requestHandlers module stored in requestHandler.js
 
-var handle = {};                                            // creation of handle object
+var handle = {};                                            // creation of handle object to handle different requests differently
 
 handle["/"] = requestHandler.start;                         // calls start function of the requestHandler module when the pathname starts with /
 handle["/start"] = requestHandler.start;                    // calls start function of the requestHandler module when the pathname starts with /start
